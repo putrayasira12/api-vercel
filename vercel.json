@@ -1,0 +1,15 @@
+{
+    "devCommand": "uvicorn secure-apipart1:app --host 0.0.0.0 --port 3000",
+    "builds": [
+      {
+        "src": "secure-apipart1.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "secure-apipart1.py"
+      }
+    ]
+  }
